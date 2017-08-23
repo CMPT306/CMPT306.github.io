@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>Lab 1</title>
+  </head>
+  <body>
+    <font face="Garamond"> <big><span style="font-weight: bold;">CMPT
+          306 Algorithms &amp; Data Structures</span><br
+          style="font-weight: bold;">
+        <span style="font-weight: bold;">Fall 2016</span><br
+          style="font-weight: bold;">
+        <br style="font-weight: bold;">
+        <span style="font-weight: bold;">Lab 1 - Due by 11:59 pm
+          Wednesday August 30, 2017</span><br style="font-weight: bold;">
+        <br style="font-weight: bold;">
+        <span style="font-weight: bold;">Introduction to
+          Python</span></big><br>
+      <br>
+    </font>
+    <hr style="width: 100%; height: 2px;"><font face="Garamond"><br>
+    </font><font face="Garamond"><br>
+    </font>
+    <table style="text-align: left; width: 75%;" border="0"
+      cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">
+            <div style="text-align: center;"><span style="font-weight:
+                bold;">How Labs are Managed and Graded</span><br>
+            </div>
+            <br>
+            1. Select a partner on your own <a target="_blank"
+href="https://docs.google.com/spreadsheets/d/1DgL4XOG6TbcmNN4C2vsTq6Nb-xPAVTUz2aZx6H_ij2Q/edit?usp=sharing">and
+sign
+
+
+              up</a>. The rules are you must pair with a new partner
+            each week.<br>
+            <br>
+            2. Work as a pair to complete the lab. At the end of the lab
+            period, make sure to share all files with each partner.<br>
+            <br>
+            3. Each partner will submit the lab separately. (Submission
+            instructions are described later in this lab.) <br>
+            <br>
+            4. If you do not finish the lab during the lab period, you
+            may either get together outside of class to complete it, or
+            complete it on your own. If you choose to complete it on
+            your own, be sure to indicate this in your submission. <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <b>Objectives</b><br>
+    <br>
+    - Understand the basics of Python programming<br>
+    <br>
+    - Run and develop Python unit tests<br>
+    <br>
+    - Explore the debugger running Python using Eclipse.<br>
+    <br>
+    <br>
+    <font face="Garamond"> Before proceeding with this lab, be sure you
+      have downloaded and installed all necessary software</a> on your personal
+      laptop.<br>
+      <br>
+      <b> Introduction to Python</b><br>
+      <br>
+      Use git to download the following python files:<br>
+      <br>
+      Open git shell (windows) or terminal (Mac). <br>
+      cd to a folder which you want to save the materials of this course. <br>
+      git clone https://github.com/CMPT306-Algorithms/CMPT306-Algorithms.github.io.git<br>
+      (Use "git pull" next time.)<br>
+      <br>
+      Now you could see two .ipynb files under CMPT306-Algorithms.github.io/labs/lab1.<br><br>
+      Use jupyter notebook to open these two files.<br>
+      <br>
+      Mac: Click the app to launch jupyter notebook, and then go to the folder you need. <br>
+      Windows: (1) Lauch jupyter notebook if the folder you need is under "Documents". Otherwise, <br>
+       (2) Click the "start" and input "cmd" to lauch the terminal. cd to the folder you need and input command "jupyter notebook". <br>
+       Example:<br>
+       H: <br>
+       H:\> cd CMPT306-Algorithms.github.io <br>
+       H:\CMPT306-Algorithms.github.io> cd labs <br>
+       H:\CMPT306-Algorithms.github.io\labs> jupyter notebook<br>
+
+      <br>
+      As a class, we will use these files to demonstrate how to design
+      unit tests and run Python programs.<br>
+      <br>
+      <b> Closest Pair Problem</b><br>
+      <br>
+      The closest pair problem is a simple geometric problem whereby you
+      have n points in a plane and you must find the closest pair of
+      points. For example, if your points are<br>
+      <br>
+      &nbsp;&nbsp;&nbsp; [-13, 5, 18, 7, -14, 21]<br>
+      <br>
+      the closest pair are (-13, -14) with a distance of 1 separating
+      them.<br>
+      <br>
+      The simplest algorithm is a <b>brute force</b> whereby you
+      compare each point to all others, and keep track of the closest
+      pair of points.<br>
+      <br>
+      The first cell of Closest.ipynb sketches a simple start to the
+      problem.
+      However it is missing the implementation of the <font
+        face="Courier New"><big>closest_pair()</big></font> function. <br>
+      <br>
+      Notice the stubbed version of<font face="Courier New"> <big>closest_pair()</big></font>
+      returns the tuple (-100, 100) . This is one interesting feature of
+      Python - the ability for functions to return multiple values.<br>
+      <br>
+      <b> The Steps</b><br>
+      <br>
+      1. Write a unit test to test the <font face="Courier New"><big>closest_pair()</big></font>
+      function. (This is known as <span style="font-weight: bold;">test-driven
+
+
+
+
+        development</span> whereby you write your unit test <b>before</b>
+      implementing the function/method you are testing.) Name your
+      Python program containing your unit test as <font face="Courier
+        New"><big>TestClosestPair.py</big></font> (Look at <font
+        face="Courier New"><big>TestExample.py</big></font> as an
+      example for writing a new unit test.) <br>
+      <br>
+      The actual lines of test code will look something like<br>
+      <br>
+    </font>
+    <blockquote> <font face="Courier New"><big>expected = (-13, -14)</big><br>
+      </font><font face="Garamond"><font face="Courier New"><big> actual
+            = Closest.closest_pair([-13, 5, 18, 7, -14, 21])</big></font><br>
+      </font> </blockquote>
+    <font face="Garamond"> <br>
+      followed by an assertion that <font face="Courier New"><big>expected</big></font>
+      equals <font face="Courier New"><big>actual</big></font>.<br>
+      <br>
+      The<font face="Courier New"> <big>[-13, 5, 18, 7, -14, 21]</big></font>
+      in the call to<font face="Courier New"> <big>closest_pair()</big></font>
+      creates a list with the values -13, 5, 18, 7, -14, 21.<br>
+      <br>
+      The existing implementation of<font face="Courier New"> <big>closest_pair()</big></font>
+      should fail this unit test.<br>
+      <br>
+      <br>
+      2. Implement the <font face="Courier New"><big>closest_pair()</big></font>
+      function<br>
+      <br>
+      Implement <font face="Courier New"><big>closest_pair()</big></font>
+      so that your implementation passes your unit test.<br>
+      <br>
+      Choose the brute force algorithm that compares each number with
+      every other number. (What is the Big-oh notation of this
+      algorithm?)<br>
+      <br>
+      I strongly suggest you and your partner think about the algorithm
+      for solving this problem before implementing it in python.<br>
+      <br>
+      This may require using the debugger.<br>
+      <br>
+      <b>Same Values in List</b><br>
+      <br>
+      Once you get your implementation working for the above unit test
+      with the list containing&nbsp; <font face="Courier New, Courier,
+        monospace"><big>[-13, 5, 18, 7, -14, 21]</big></font>, next make
+      sure it works if the list contains the same values. For example:<br>
+    </font>
+    <blockquote> <font face="Courier New"><big>expected = (-13, -13)</big><br>
+      </font><font face="Garamond"><font face="Courier New"><big> actual
+            = Closest.closest_pair([<font color="#3366ff">-13</font>, 5,
+            18, 7, -14, 21,<font color="#3366ff">-13</font>])</big></font><br>
+      </font> </blockquote>
+    <font face="Garamond"> <br>
+      followed by an assertion that <font face="Courier New"><big>expected</big></font>
+      equals <font face="Courier New"><big>actual</big></font>.<br>
+      <br>
+      <br>
+      <span style="font-weight: bold;">What to Submit</span><br>
+      <br>
+      Be sure to include your names at the top of each source file.
+      Refer to program grading guidelines</a> for best practices for submitting source code.<br>
+      <br>
+      Please submit your <font face="Courier New"><big>Closest.ipynb</big></font>
+     to Canvas. Be sure to include the names of each
+      partner on the submission. (<b>Each partner needs to submit the
+        files</b>.)<br>
+      <br>
+      <br>
+    </font>
+  </body>
+</html>
