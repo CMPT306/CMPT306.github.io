@@ -1,8 +1,7 @@
 /local
 /.ipynb_checkpoints
 **/.ipynb_checkpoints
-/labs/*/*.ipynb
-/homework/*/*.ipynb
+**/solution
 
 *.pyc
 .DS_Store*
