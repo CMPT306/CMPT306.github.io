@@ -6,4 +6,5 @@
 **/student
 
 *.pyc
+~$*
 .DS_Store*
