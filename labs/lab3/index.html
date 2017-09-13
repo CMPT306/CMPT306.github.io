@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Lab 3</title>
+  </head>
+  <body>
+    <b>CMPT 306 Algorithms and Data Structures </b><b><br>
+    </b><b>Fall 2017</b><b><br>
+    </b><b>Lab 3</b><b><br>
+    </b><b><br>
+    </b><b>Due September 20, 2017</b><br>
+    <br>
+    <meta charset="utf-8">
+    <font style="color: rgb(0, 0, 0); font-size: medium; font-style:
+      normal; font-variant: normal; font-weight: normal; letter-spacing:
+      normal; line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"
+      face="Garamond"><b>Hangman</b><br>
+    </font><font style="color: rgb(0, 0, 0); font-size: medium;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;" face="Garamond"><br>
+    </font><span style="color: rgb(0, 0, 0); font-family: Times;
+      font-size: medium; font-style: normal; font-variant: normal;
+      font-weight: normal; letter-spacing: normal; line-height: normal;
+      orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: 1;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline
+      !important; float: none;"></span>
+    <table style="font-family: Times; letter-spacing: normal; orphans:
+      auto; text-indent: 0px; text-transform: none; widows: 1;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align:
+      left; width: 1361px;" border="0" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">
+            <div style="text-align: center;"><span style="font-weight:
+                bold;">How Labs are Managed and Graded</span><br>
+            </div>
+            <br>
+            1. Select a partner on your own<span
+              class="Apple-converted-space">&nbsp;</span><a target="_blank"
+href="https://docs.google.com/spreadsheets/d/1DgL4XOG6TbcmNN4C2vsTq6Nb-xPAVTUz2aZx6H_ij2Q/edit?usp=sharing">and sign up</a>.. The rules are you must pair with a new
+            partner each week.<br>
+            <br>
+            2. Work as a pair to complete the lab. At the end of the lab
+            period, make sure to share all files with each partner.<br>
+            <br>
+            3. Each partner will submit the lab separately. (Submission
+            instructions are described later in this lab.)<span
+              class="Apple-converted-space">&nbsp;</span><br>
+            <br>
+            4. If you do not finish the lab during the lab period, you
+            may either get together outside of class to complete it, or
+            complete it on your own. If you choose to complete it on
+            your own, be sure to indicate this in your submission.<span
+              class="Apple-converted-space">&nbsp;</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    This lab will involve writing a solution to the classic game of <a
+      target="_blank"
+      href="https://en.wikipedia.org/wiki/Hangman_%28game%29">Hangman</a>
+    where players get 10 guesses to guess a word chosen by random from
+    your game.<br>
+    <br>
+    The following file contains a Python script
+    that is passed&nbsp; file containing the words to be chosen from (<a
+      target="_blank" href="./words.txt">words.txt</a>)<br>
+    <br>
+    - (Jupyter Notebook User) <a href="./Hangman.ipynb.zip">Hangman.ipynb.zip</a><br>
+    <br>
+    - (Eclipse User) <a href="./Hangman.py.zip">Hangman.py.zip</a><br>
+    <br>
+    Please use at least one map() and one lambda operator. You can use this <a href="https://www.python-course.eu/lambda.php"> page </a> as reference. <strong>I will not give you full points if you do not use any map or lambda. </strong>
+    <br>
+    <br>
+    The game can be written in any style that you choose. The important
+    thing is that you account for the following:<br>
+    <br>
+    - only 10 times guesses are allowed.<br>
+    <br>
+    - only allow alphabetic characters to be considered. If a user
+    enters a '$', '*', etc. skip over the input. (Python has a pretty
+    useful function to check if a string is alphabetic.). In this case, print "Only allow alphabetic characters." <br>
+    <br>
+    - the file you are choosing words from (<a target="_blank"
+      href="./words.txt">words.txt</a>) contains all lower-case
+    characters. You can allow a user to enter an upper-case alphabetic
+    character (A .. Z), but get its lower-case equivalent when
+    comparing.<br>
+    <br>
+    - if a user enters a character that appears more than once in the
+    word (i.e. 'aardvark' where 'a' occurs multiple times) be sure to
+    identify each occurrence of the character, and not just the first.<br>
+    <br>
+    - allow a user to guess a character only once. If they enter the
+    same character more than once, print out a message indicating the
+    character has already been considered. Furthermore, if the character
+    is an incorrect guess, only count it as an incorrect guess the first
+    time. In this case, print "The letter", ch, "has already been used."<br>
+    <br>
+    - if a user enters a character that is not in the correct word, print ch,"does not occur."<br>
+    <br>
+    - if scuess, print 'Congratulations!', otherwise, print 'Sorry dude, the word is', word<br>
+    <br>
+    Please run the following code to see examples:<br>
+    cd to the folder having the file you download and unzip this file<br>
+    python Hangman_Solution.pyc<br>
+    <br>
+    <b>What to Submit</b><br>
+    <br>
+    Both lab partners need to submit the solution separately to the Lab
+    3 dropbox on <a target="_blank"
+      href="https://westminster.instructure.com/">Canvas</a>. A rubric
+    has been posted that identifies how your lab will be graded.<br>
+    <br>
+    <br>
+  </body>
+</html>
