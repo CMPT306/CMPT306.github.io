@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>Graphs and Graph Algorithms</title>
+  </head>
+  <body>
+    <span style="font-weight: bold;">Graphs and Algorithms on Graphs</span><br
+      style="font-weight: bold;">
+    <br style="font-weight: bold;">
+    <span style="font-weight: bold;">Overview</span><br>
+    <br>
+    - <a target="_blank" href="./graph-handouts.pdf">Graph Notes</a>
+    (Section 1.4 of your text also has an overview of graphs.) <br>
+    <br>
+    &lt; Make sure you are comfortable with all topics in this handout.
+    &gt;<br>
+    <br>
+    <span style="font-weight: bold;">Real World Examples</span><br>
+    <br>
+    - <a target="_blank"
+      href="http://www.southwest.com/travel_center/routemap_dyn.html">Southwest
+
+Route
+      Map</a><br>
+    <br>
+    <br>
+    <br>
+    <span style="font-weight: bold;">Depth First Search</span><br>
+    <br>
+    General idea is to begin at a vertex and traverse as far as
+    possible.<br>
+    <br>
+    (We use the term '<span style="font-style: italic;">Search</span>'
+    rather loosely here as we are in fact doing a depth-first <span
+      style="font-style: italic;">traversal</span>. Changing the
+    algorithm
+    so that it in fact performed a search should be trivial.)<br>
+    <br>
+    <span style="font-weight: bold;">Algorithm</span>:<br>
+    <br>
+    <div style="margin-left: 40px;"><big><span style="font-weight: bold;
+          font-family: monospace;">1. Mark each vertex
+          in graph G as unvisited</span></big><br style="font-weight:
+        bold; font-family: monospace;">
+      <br style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">2.
+          for
+          each vertex v in graph G</span></big><br style="font-weight:
+        bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+if
+v
+is
+unvisited
+
+then
+          dfs(v)</span></big><br>
+      <br style="font-weight: bold; font-family: monospace;">
+      <br style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">dfs(vertex
+          v)</span></big><br style="font-weight: bold; font-family:
+        monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">{</span></big><big><span
+          style="font-weight: bold; font-family: monospace;"></span></big><br
+        style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+mark
+v
+
+as
+          visited</span></big><br style="font-weight: bold; font-family:
+        monospace;">
+      <br style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+for
+each
+vertex
+w
+adjacent
+
+to
+          v</span></big><br style="font-weight: bold; font-family:
+        monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+if
+w
+is
+unvisited
+
+then
+          dfs(w)</span></big><br style="font-weight: bold; font-family:
+        monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">}</span></big><br
+        style="font-weight: bold; font-family: monospace;">
+    </div>
+    <br>
+    Note: We could also implement this algorithm with a stack rather
+    than
+    using recursion.<br>
+    <br>
+    &lt; In- class Exercise &gt;&gt;<br>
+    <br>
+    <span style="font-weight: bold;">Efficiency</span>?<br>
+    <br>
+    <span style="font-weight: bold;">Applications of Depth-First Search</span><br>
+    <br>
+    <span style="font-weight: bold;">Connectivity</span> - Are all the
+    vertices in a graph connected? <br>
+    <br>
+    <span style="font-weight: bold;">Cycles</span> - Does the graph
+    contain
+    a cycle?<br>
+    <br>
+    <span style="font-weight: bold;">Bi-Connectivity </span><br>
+    <br>
+    This answers the question "<span style="font-style: italic;">Is
+      there
+      more than one way to get to a vertex in a graph?</span>"<br>
+    <br>
+    <span style="font-weight: bold;">Articulation Point</span> - A
+    vertex
+    in a connected graph that - if deleted - would break the graph into
+    2
+    or more disconnected pieces.<br>
+    <br>
+    A graph with no articulation points is said to be <span
+      style="font-weight: bold;">bi-connected</span>.<br>
+    <br>
+    <br>
+    <span style="font-weight: bold;">Breadth First Search</span><br>
+    <br>
+    General idea is to traverse (note again a <span style="font-style:
+      italic;">traversal</span> and not really a <span
+      style="font-style: italic;">search</span>) vertices level by
+    level.<br>
+    <br>
+    <span style="font-weight: bold;">Algorithm</span>:<br>
+    <br>
+    <div style="margin-left: 40px;"><big><span style="font-weight: bold;
+          font-family: monospace;">1. Mark each vertex
+          in graph G as unvisited</span></big><big><span
+          style="font-weight: bold; font-family: monospace;"></span></big><br
+        style="font-weight: bold; font-family: monospace;">
+      <br style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">2.
+          for
+          each vertex v in graph G</span></big><br style="font-weight:
+        bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+if
+v
+is
+unvisited
+
+then
+          bfs(v)</span></big><br>
+      <br style="font-weight: bold; font-family: monospace;">
+      <br style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">bfs(vertex
+          v)</span></big><br style="font-weight: bold; font-family:
+        monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">{</span></big><big><span
+          style="font-weight: bold; font-family: monospace;"></span></big><br
+        style="font-weight: bold; font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+mark
+v
+
+as
+          visited</span></big><big><span style="font-weight: bold;
+          font-family: monospace;"><br>
+          <br>
+          &nbsp;&nbsp;&nbsp; add v to queue</span></big><br>
+      <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <big><span
+          style="font-weight: bold; font-family: monospace;">while queue
+          is not
+          empty do {</span></big><br style="font-weight: bold;
+        font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+for
+each
+vertex
+w
+
+adjacent
+          to front vertex</span></big><br style="font-weight: bold;
+        font-family: monospace;">
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+if
+w
+is
+
+unvisited
+          then {<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; mark w as visited<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; add w to queue<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+        </span></big></div>
+    <big>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span
+        style="font-weight: bold; font-family: monospace;">remove front
+        vertex
+        from queue</span></big><br>
+    <div style="margin-left: 40px;">
+      <div style="margin-left: 40px;"><big><span style="font-weight:
+            bold; font-family: monospace;"></span></big></div>
+      <big><span style="font-weight: bold; font-family: monospace;">&nbsp;&nbsp;&nbsp;
+          }<br style="font-weight: bold; font-family: monospace;">
+        </span></big><big><span style="font-weight: bold; font-family:
+          monospace;">}</span></big><br style="font-weight: bold;
+        font-family: monospace;">
+    </div>
+    <br>
+    Note we&nbsp; implement this algorithm with a queue which does not
+    easily lend itself to recursion.<br>
+    <br>
+    &lt; In- class Exercise &gt;&gt;<br>
+    <br>
+    <span style="font-weight: bold;">Efficiency</span>?<br>
+    <br>
+    <span style="font-weight: bold;">Applications of Breadth-First
+      Search<br>
+      <br>
+    </span>We can use a BFS tree to determine connectivity as well as
+    cycles.<br>
+    <br>
+    It does not have a similar concept as articulation points.<br>
+    <br>
+    <br>
+    <span style="font-weight: bold;">Topological Orderings</span><br>
+    <br>
+    Requires using a <span style="font-weight: bold;">directed acyclic
+      graph</span> (or <span style="font-weight: bold;">DAG</span>.)<br>
+    <br>
+    A topological ordering of the vertices in a directed graph such
+    that,
+    if there appears a path from Vi to Vj, Vj appears after Vi in the
+    ordering.<br>
+    <br>
+    <blockquote>
+      <blockquote>
+        <a target="_blank" href="./requirements.jpg"><img alt=""
+            src="./requirements.jpg" height="450" border="0" width="600"></a>
+        <br>
+      </blockquote>
+    </blockquote>
+    Perhaps a more relevant example in <a target="_blank"
+      href="./suits.png">contemporary technology</a>.<br>
+    <br>
+    <br>
+    How might we use a DFS to perform a topological ordering?<br>
+    <br>
+    We will explore a second algorithm in class that used the <span
+      style="font-weight: bold;">indegree</span> of each vertex where <span
+      style="font-weight: bold;">indegree</span> refers to the number of
+    incoming edges to a vertex.<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    <br>
+  </body>
+</html>
