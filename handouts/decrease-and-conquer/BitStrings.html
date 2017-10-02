@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Bit Strings</title>
+  </head>
+  <body>
+    <br>
+    <span style="font-weight: bold;">Bit Strings</span><br>
+    <br>
+    For each element a<sub>i</sub>, we associate bit<sub>i</sub> with
+    it. (We read bit positions from left to right.)<br>
+    <br>
+    If bit<sub>i</sub> = 0, a<sub>i</sub> is not in the set. If bit<sub>i</sub>
+    = 1, a<sub>i</sub> is in the set.<br>
+    <br>
+    To generate all subsets of an n-element set, we generate successive
+    binary numbers from 0 ... (2^n)-1.<br>
+    <br>
+    For n = 3<br>
+    <br>
+    <table style="text-align: left; width: 75%;" border="1"
+      cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">bit strings<br>
+          </td>
+          <td style="vertical-align: top;">000<br>
+          </td>
+          <td style="vertical-align: top;">001<br>
+          </td>
+          <td style="vertical-align: top;">010<br>
+          </td>
+          <td style="vertical-align: top;">011<br>
+          </td>
+          <td style="vertical-align: top;">100<br>
+          </td>
+          <td style="vertical-align: top;">101<br>
+          </td>
+          <td style="vertical-align: top;">110<br>
+          </td>
+          <td style="vertical-align: top;">111<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">subsets<br>
+          </td>
+          <td style="vertical-align: top;">null<br>
+          </td>
+          <td style="vertical-align: top;">{a3}<br>
+          </td>
+          <td style="vertical-align: top;">{a2}<br>
+          </td>
+          <td style="vertical-align: top;">{a2, a3}<br>
+          </td>
+          <td style="vertical-align: top;">{a1}<br>
+          </td>
+          <td style="vertical-align: top;">{a1, a3}<br>
+          </td>
+          <td style="vertical-align: top;">{a1, a2}<br>
+          </td>
+          <td style="vertical-align: top;">{a1, a2, a3}<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </body>
+</html>
