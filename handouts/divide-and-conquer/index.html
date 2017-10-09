@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="Content-Type">
+  <title>Divide and Conquer Algorithms</title>
+</head>
+<body>
+<big><span style="font-weight: bold;">Divide and Conquer Algorithms</span></big><br>
+<br>
+<span style="font-weight: bold;">Recurrence Relation</span><br>
+<br>
+The standard recurrence relation for divide and conquer algorithms is
+represented as<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-weight: bold; font-style: italic;">T(n) = a T(n/b) +
+f(n)</span></big><br>
+</div>
+<br>
+where a problem of size <big><span
+ style="font-weight: bold; font-style: italic;">n</span></big> is
+divided into <big><span style="font-weight: bold; font-style: italic;">b</span></big>
+instances each of size <big><span
+ style="font-weight: bold; font-style: italic;">n/b</span></big> with <big><span
+ style="font-weight: bold; font-style: italic;">a</span></big> of them
+needing to be solved. The function <big><span
+ style="font-weight: bold; font-style: italic;">f(n)</span></big>
+represents the time spent dividing the problem into smaller problems
+and combining their solutions.<br>
+<br>
+<span style="font-weight: bold;">Master Theorem</span><br>
+<br>
+If <span style="font-weight: bold;">f(n) &#8712; &#920; (n^d)</span> with <span
+ style="font-weight: bold;">d &gt;= 0</span>, then the following holds:
+<br>
+<br>
+<div style="margin-left: 40px;"><img
+ style="width: 400px; height: 136px;" alt="" src="./master.png"><br>
+</div>
+<br>
+<br>
+<span style="font-weight: bold;">General Idea</span><br>
+<br>
+Divide a problem into several smaller instances of the same problem.
+Solve each of the smaller problems (typically recursively), and combine
+solutions of the smaller problems to obtain a solution to the original
+problem.<br>
+<br>
+<div style="margin-left: 40px;"><img
+ style="width: 600px; height: 399px;" alt="" src="./d-q.png"><br>
+</div>
+<br>
+<span style="font-weight: bold;">Examples</span><br>
+<br>
+- Merge Sort<br>
+<br>
+<div style="margin-left: 80px;"><img
+ style="height: 50%;" alt="" src="./mergesort.png"><br><br><br>
+ <img
+ style="height: 50%;" alt="" src="./merge.png"><br><br><br>
+ <img
+ style="height: 70%;" alt="" src="./mergesortsteps.png"><br><br><br>
+</div>
+<br>
+- Quick Sort <br>
+<img
+ style="width: 55%; height: 50%;" alt="" src="./quicksort.png"><br><br><br>
+ <img
+ style="width: 50%; height: 60%;" alt="" src="./quicksortpartition.png"><br><br><br>
+<br>
+- Finding Minimum and Maximum<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">int max (List L)</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">{</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; if (L.size ==
+1)</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return L;</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; else {</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; left = max(left side of L);</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; right = max(right side of L);</span><br
+ style="font-family: monospace;">
+<br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; if (left &gt; right)</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return left;</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; else</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return right;</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">}</span></big><br>
+</div>
+<br>
+<div style="margin-left: 80px;"><img
+ style="width: 654px; height: 453px;" alt="" src="./max.png"><br>
+</div>
+<br>
+- Conversion of Bases<br>
+<br>
+<div style="margin-left: 40px;">&lt;&lt; in class example converting a
+binary number to its decimal equivalent. &gt;&gt;<br>
+</div>
+<br>
+
+<br>
+The Quick and Merge&nbsp; sorts can be represented with the following
+recurrence relation:<br>
+<br>
+<div style="margin-left: 40px;"><span
+ style="font-weight: bold; font-style: italic;">T(n) = 2T(n/2) + n
+where T1 = 0</span><br>
+</div>
+<br>
+<span style="font-weight: bold;">Further Examples</span><br>
+<br>
+- Binary Search<br>
+<br>
+This can be modeled with the recurrence:<br>
+<br>
+<div style="margin-left: 40px;"><span
+ style="font-weight: bold; font-style: italic;">T(n) = T(n/2) + 1 where
+C1 = 1</span><br>
+</div>
+<br>
+<span style="font-weight: bold;"><br>
+Divide and Conquer - Closest Pair<br>
+<br>
+</span>Recall the brute-force solution to this problem?<span
+ style="font-weight: bold;"><br>
+<br>
+Divide and Conquer:<br>
+</span><br>
+- Sort all <span style="font-weight: bold; font-style: italic;">n</span>
+points in ascending order by x-coordinates.<br>
+<br>
+- Divide points into two subsets (left and right) of size <span
+ style="font-weight: bold; font-style: italic;">n/2</span>.<br>
+<br>
+- Recursively find closest pair for each subset:<br>
+<br>
+<div style="margin-left: 40px;">- Let <span
+ style="font-weight: bold; font-style: italic;">d1</span> = closest
+pair in left subset. Let <span
+ style="font-weight: bold; font-style: italic;">d2</span> = closest
+pair in right subset.<br>
+<br>
+- Let <span style="font-weight: bold; font-style: italic;">d = min(d1,
+d2)</span> [This may not be the closest pair because a closer pair may
+straddle the dividing line.]<br>
+<br>
+- Let <span style="font-style: italic; font-weight: bold;">C1</span>
+and <span style="font-weight: bold; font-style: italic;">C2</span> be
+the subsets of points on the left and right portions of the strip. <br>
+<br>
+- Examine points that are between left and right subsets, but are <span
+ style="font-weight: bold; font-style: italic;">&lt; d</span> apart.
+(i.e. for every point <span
+ style="font-weight: bold; font-style: italic;">P(x,y)</span> in <span
+ style="font-weight: bold; font-style: italic;">C1</span>, inspect
+points in <span style="font-weight: bold; font-style: italic;">C2</span>
+that are closer to <span style="font-weight: bold; font-style: italic;">P</span>
+than <span style="font-weight: bold; font-style: italic;">d</span>.)<br>
+</div>
+<br>
+<div style="margin-left: 80px;"><img
+ style="width: 500px; height: 324px;" alt="" src="./closest-pair.png"><br>
+</div>
+<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+</span></span>
+<div style="margin-left: 40px;"><br>
+<br>
+We only need to check points that are
+<span style="font-weight: bold; font-style: italic;">&lt;= 2d</span>
+apart.<span style="font-weight: bold;"><span style="font-weight: bold;">
+</span></span>In fact, there are only 6
+possible points we need to check because any pair of points in <span
+ style="font-weight: bold; font-style: italic;">C2</span> is at least
+distance <span style="font-weight: bold; font-style: italic;">d</span>
+apart from each other.<br>
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></div>
+<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+</span></span>
+<div style="margin-left: 40px;">
+<div style="margin-left: 120px;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><br>
+<br>
+<img style="width: 346px; height: 328px;" alt="" src="./min-dist.png"></span></span><br>
+</div>
+<span style="font-weight: bold;"><span style="font-weight: bold;"></span></span></div>
+Merge step can be linear if we keep lists of points sorted also in
+y-axis.<span style="font-weight: bold;"><span style="font-weight: bold;"><br>
+<br>
+</span></span>
+<div style="margin-left: 40px;"><span style="font-weight: bold;"><span
+ style="font-style: italic;">Tn = 2T(n/2) + n &nbsp; &#8712; &#920; (n
+lg n)</span></span><br>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;"><span style="font-weight: bold;"></span>Divide
+and
+Conquer
+-
+Convex
+Hull</span><br>
+<br>
+"<span style="font-style: italic;">Quickhull</span>" algorithm for its
+similarity to the Quicksort.<br>
+<br>
+Assume n points are sorted in increasing order of their X coordinates.<br>
+<br>
+Left-most and right-most (P1 and P2) points are on the hull.<br>
+<br>
+Intuitively, divide the points in half - create an <span
+ style="font-weight: bold;">upper hull</span> and <span
+ style="font-weight: bold;">lower hull</span>.<br>
+<br>
+*** We also identify a point P3 as being to <span
+ style="font-weight: bold; font-style: italic;">left</span> of a line
+between points P1 and P2 if the line extending from P1 -&gt; P2 -&gt;
+P3 forms a counter-clockwise cycle.<br>
+&nbsp;<br>
+Algorithmically: (*** <span style="font-style: italic;">There are
+several different ways this can be implemented algorithmically using
+divide and conquer</span>.)<br>
+<br>
+<span style="font-weight: bold;">Calculate Upper Hull</span> (obviously
+works similarly for lower half)<br>
+<br>
+<div style="margin-left: 40px;">CreateUpperHull(line, set)<br>
+{<br>
+&nbsp;&nbsp;&nbsp; 0. If length(set) == 0 return<br>
+<br>
+&nbsp;&nbsp;&nbsp; 1. Identify Pmax - the point that is the farthest
+from the line<br>
+<br>
+&nbsp;&nbsp;&nbsp; 2. Create new line line1&nbsp; P1 to Pmax.<br>
+<br>
+&nbsp;&nbsp;&nbsp; 3. Identify set1 - all points that are to the left
+of line1<br>
+<br>
+&nbsp;&nbsp;&nbsp; 4. Recursive call to CreateUpperHull(line1, set1)<br>
+<br>
+&nbsp;&nbsp;&nbsp; 5. Add Pmax to the hull<br>
+<br>
+&nbsp;&nbsp;&nbsp; 6. Create new line line2 - PMax to P2<br>
+<br>
+&nbsp;&nbsp;&nbsp; 7. Identify set2 - all points that are to the left
+of line2<br>
+<br>
+&nbsp;&nbsp;&nbsp; 8. Recursive call to CreateUpperHull(line2, set2)<br>
+}<br>
+</div>
+<br>
+<br>
+<br>
+Graphically<br>
+<br>
+<div style="margin-left: 40px;">
+<img
+ style="width: 50%" alt="" src="./quick-hull-2.png"><br><br><br>
+ <img
+ style="width: 50%" alt="" src="./quick-hull-3.png"><br><br><br>
+ <img
+ style="width: 600px; height: 221px;" alt="" src="./quick-hull.png"><br>
+</div>
+<br>
+<br>
+<br>
+Analysis<br>
+<br>
+Worst case is &#920;(n^2) (This occurs when all points are on the convex
+hull.)<br>
+<br>
+Average case is &#920;(n) (This occurs when most points are not on the
+convex hull.)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
