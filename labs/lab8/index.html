@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+
+<TITLE>
+8-Puzzle Programming Assignment
+</TITLE></HEAD>
+
+<BODY>
+<H3>CMPT 306</H3>
+
+<p>
+
+Write a program to solve square game using the 
+A* search algorithm.
+
+<p>
+<br>
+
+<b>
+The problem.
+</b>
+It is 
+played on a 3-by-3 grid with 8 square blocks labeled 1 through 8 and a blank 
+square. Your goal is to rearrange the blocks so that they are in order. 
+You are permitted to slide blocks horizontally or vertically
+into the blank square. 
+The following 
+shows a sequence of legal moves from an initial board position (left)
+to the goal position (right).
+<pre><blockquote>
+    1  3        1     3        1  2  3        1  2  3        1  2  3
+ 4  2  5   =>   4  2  5   =>   4     5   =>   4  5      =>   4  5  6
+ 7  8  6        7  8  6        7  8  6        7  8  6        7  8 
+
+ initial                                                      goal</blockquote></pre>
+
+<p>
+We now describe a solution to the problem that illustrates a 
+general artificial intelligence methodology known as the
+<a href = "http://en.wikipedia.org/wiki/A*_search_algorithm">A* search algorithm</a>.
+Please check the comments of code to see the definition of a state.
+First, insert the initial state 
+into a priority queue. Then,
+delete from the priority queue the state with the minimum priority,
+and insert onto the priority queue all neighboring states
+(those that can be reached in one move).
+Repeat this procedure until the state dequeued is the goal state.
+The success of this approach
+hinges on the choice of <em>priority function</em>. The following two functions are choices for the first part of priority function. 
+
+<ul>
+
+<li><em>Hamming function.</em>
+A natural function for a given state is the number
+of blocks in the wrong position,
+plus the number of moves made so far to get to the state.
+Intutively, states with a small number of blocks in the wrong position
+are close to the goal state, and we prefer states that
+have been reached using a small number of moves.
+
+<p><li><em>Manhattan function.</em>
+A better function for a given state is the
+sum of the distances (sum of the vertical and horizontal distance)
+from the blocks to their goal positions,
+plus the number of moves made so far to get to the state.
+
+</ul>
+
+For example, the Hamming and Manhattan of the state below
+are 5 and 10, respectively.
+
+<pre><blockquote>
+ 8  1  3        1  2  3     1  2  3  4  5  6  7  8    1  2  3  4  5  6  7  8
+ 4     2        4  5  6     ----------------------    ----------------------
+ 7  6  5        7  8        1  1  0  0  1  1  0  1    1  2  0  0  2  2  0  3
+
+ initial          goal           Hamming = 5              Manhattan = 10</blockquote></pre>
+
+
+
+<p><b>A useful optimization.</b>
+Do not push a square that is already visited
+
+<br>
+    The following program can be used as a starting point for this lab:<br>
+    <br>
+    - (Jupyter Notebook User) <a href="./lab8.ipynb">lab8.ipynb</a><br>
+    <br>
+    - (Eclipse User) <a href="./lab8.py">lab8.py</a><br>
+    <br>
+
+</BODY>
+
+</HTML>
+
