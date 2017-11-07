@@ -7,7 +7,7 @@
 **/local
 **/quiz
 **/tex
-**/exam
+**/latex
 
 *.pyc
 ~$*
