@@ -9,6 +9,6 @@
 **/tex
 **/latex
 
-*.pyc
+#*.pyc
 ~$*
 .DS_Store*
