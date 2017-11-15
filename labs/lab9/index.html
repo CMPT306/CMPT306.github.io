@@ -321,16 +321,116 @@ clears &quot;easy&quot;.</p>
 <hr>
 <br>
 <br>
-Lab 9 Question:
+Lab 9 Question:<br>
+
+Given a triangle below, please design and implement a backtracking algorithm for solving this puzzle.<br>
+
+Question 1. Starting with any given location of the empty hole, find a sequence of moves to solve this puzzle.<br>
+
+Question 2, Starting with any given location of the empty hole, find a sequence of moves to solve this puzzle AND the last remaining peg on the board is at the initial position of the empty hole. 
+
 <p>
-<img border="0" src="question.png" width="550" height="300"></p>
+<img border="0" src="triangle.png" width="550" height="300"></p>
 
 <br>
 Download this file as a starting point:<br>
 - <a href="./lab9.py">lab9.py</a><br>
 - <a href="./lab9.ipynb">lab9.ipynb</a><br>
-The ouput of your code should be similar with the above table. <br>
-You also can refer this <a href="http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/"> page</a> of nqueen solution to learn how to implement back-tracking algorithm. 
+<br>
+You also can refer this <a href="http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/"> page</a> of nqueen solution to learn how to implement back-tracking algorithm. <br><br>
+
+The ouput of your code should be similar with this: <br>
+<xmp>
+
+Please input row of the hole (<=4):4
+Please input column of the hole (<=row):0
+    +
+   + +
+  + + +
+ + + + +
+o + + + +
+[2, 0] to  [4, 0]
+    +
+   + +
+  o + +
+ o + + +
++ + + + +
+[0, 0] to  [2, 0]
+    o
+   o +
+  + + +
+ o + + +
++ + + + +
+[3, 2] to  [3, 0]
+    o
+   o +
+  + + +
+ + o o +
++ + + + +
+[1, 1] to  [3, 1]
+    o
+   o o
+  + o +
+ + + o +
++ + + + +
+[3, 0] to  [1, 0]
+    o
+   + o
+  o o +
+ o + o +
++ + + + +
+[3, 3] to  [1, 1]
+    o
+   + +
+  o o o
+ o + o o
++ + + + +
+[4, 1] to  [2, 1]
+    o
+   + +
+  o + o
+ o o o o
++ o + + +
+[1, 0] to  [3, 2]
+    o
+   o +
+  o o o
+ o o + o
++ o + + +
+[4, 3] to  [4, 1]
+    o
+   o +
+  o o o
+ o o + o
++ + o o +
+[4, 0] to  [4, 2]
+    o
+   o +
+  o o o
+ o o + o
+o o + o +
+[4, 2] to  [2, 2]
+    o
+   o +
+  o o +
+ o o o o
+o o o o +
+[1, 1] to  [3, 3]
+    o
+   o o
+  o o o
+ o o o +
+o o o o +
+[4, 4] to  [2, 2]
+    o
+   o o
+  o o +
+ o o o o
+o o o o o
+
+
+</xmp>
+
 
 
 
