@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=windows-1252"
+ http-equiv="Content-Type">
+  <title>Greedy Algorithmic Technique</title>
+</head>
+<body>
+<big><span style="font-weight: bold;">Greedy Technique</span></big><br>
+<br>
+<span style="font-weight: bold;">Overview</span><br>
+<br>
+The greedy algorithmic technique is a generalization of algorithms that
+make the next best choice without regard to future consequences.<br>
+<br>
+<span style="font-weight: bold;">Shortest Path </span><br>
+<br>
+Find the shortest path from a single designated vertex <span
+ style="font-weight: bold;">v</span> to every other vertex in graph <span
+ style="font-weight: bold;">G</span>.<br>
+<br>
+<span style="font-weight: bold;">Dijkstra's Algorithm</span><br>
+<br>
+- <a target="_blank" href="./dijkstraworksheet.pdf">worksheet</a><br>
+<br>
+<br>
+<span style="font-weight: bold;">Minimum Spanning Tree</span><br>
+<br>
+A Minimum Spanning Tree (<span style="font-weight: bold;">MST</span>)
+of a connected graph G is the tree that is formed from the graphs
+edges&nbsp; that connect all of the vertices of G where the sum of the
+weights of the edges is the minimum.<br>
+<br>
+[ <a target="_blank"
+ href="http://upload.wikimedia.org/wikipedia/commons/d/d2/Minimum_spanning_tree.svg">An
+example</a> ]<br>
+<br>
+<br>
+<span style="font-weight: bold;">Prim's Algorithm</span><br>
+<br>
+<div style="margin-left: 40px;">1. Select any vertex in G as the root
+of the MST.<br>
+<br>
+2. Choose the vertex v that is closest to the set of vertices already
+taken.<br>
+<br>
+3. Add v to the MST.<br>
+<br>
+4. Goto step 2 until all vertices in G are in the MST.<br>
+</div>
+<br>
+<span style="font-weight: bold;">Kruskals Algorithm</span><br>
+<br>
+<div style="margin-left: 40px;">The general strategy is to select edges
+in order of smallest weight and accept an edge if it does not form a
+cycle.<br>
+<br>
+</div>
+<br>
+<span style="font-weight: bold;">Union Find Structure</span><br>
+<br>
+- <span style="font-weight: bold;">R</span> is an equivalence relation
+on the set of <span style="font-weight: bold;">S</span> elements. For
+every pair of elements <span style="font-weight: bold;">(a,b)</span>
+in set <span style="font-weight: bold;">S</span>, if <span
+ style="font-weight: bold;">(a R b)</span> is true, then we say <span
+ style="font-weight: bold;">a</span> is related to <span
+ style="font-weight: bold;">b</span>.<br>
+<br>
+- This equivalence relation satisfies the following three properties:<br>
+<br>
+1) <span style="font-weight: bold;">Reflexive</span> - Any component
+is connected to itself.<br>
+<br>
+2) <span style="font-weight: bold;">Symmetric</span> - If <span
+ style="font-weight: bold;">a</span> is connected to <span
+ style="font-weight: bold;">b</span>, <span style="font-weight: bold;">b</span>
+is connected to <span style="font-weight: bold;">a</span>.<br>
+<br>
+3) <span style="font-weight: bold;">Transitive</span> - If <span
+ style="font-weight: bold;">a</span> is connected to <span
+ style="font-weight: bold;">b</span>, <span style="font-weight: bold;">b</span>
+is connected to <span style="font-weight: bold;">c</span>, then <span
+ style="font-weight: bold;">a</span> is connected to <span
+ style="font-weight: bold;">c</span>. <br>
+&nbsp;<br>
+<br>
+<span style="font-weight: bold;">Equivalence&nbsp; Class</span> - The
+equivalence class <span style="font-weight: bold;">X</span> of set <span
+ style="font-weight: bold;">S</span> is the subset of <span
+ style="font-weight: bold;">S</span> containing all the elements
+related to <span style="font-weight: bold;">X</span>.<br>
+<br>
+For example, we could have a set of balls which may be colored either
+red, blue, or green.<br>
+<br>
+<div style="margin-left: 40px;"><img
+ style="width: 318px; height: 128px;" alt="" src="./balls.jpg"><br>
+</div>
+<br>
+There is an equivalence class <span style="font-weight: bold;">red</span>
+which is the set of red-colored balls, likewise there are equivalence
+classes for <span style="font-weight: bold;">blue</span> and <span
+ style="font-weight: bold;">green</span> as well.<br>
+<br>
+- An equivalence class allows us to easily check if two elements are
+equivalent to one another - to test if <span style="font-weight: bold;">a</span>
+is equivalent to <span style="font-weight: bold;">b</span>, we check
+if <span style="font-weight: bold;">a</span> and <span
+ style="font-weight: bold;">b</span> are in the same equivalence class.<br>
+<br>
+Operations:<br>
+<br>
+1) <span style="font-weight: bold;">find(a)</span> - This returns the
+name of the equivalence class of a given element a.<br>
+<br>
+2) <span style="font-weight: bold;">union(x,y)</span> - A union of the
+equivalence classes <span style="font-weight: bold;">x</span> and <span
+ style="font-weight: bold;">y</span> places <span
+ style="font-weight: bold;">x</span> and <span
+ style="font-weight: bold;">y</span> in the same equivalence class.<br>
+<br>
+This is also called a <span style="font-weight: bold;">union-find</span>
+data structure.<br>
+<br>
+Initially, the input is a collection of N sets, each set with one
+element. These sets are initially called <span
+ style="font-weight: bold;">disjoint sets</span>. <br>
+<br>
+In Python<br>
+<br>
+- <a target="_blank" href="./DisjointSet.py.txt">DisjointSet.py</a><br>
+<br>
+<b>Huffman Coding</b><br>
+<br>
+Huffman coding represents a greedy algorithm for compressing data.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
