@@ -81,7 +81,6 @@ def heapupdate(heap, node):
         if heap[i][1] == vertex:
             heap[i][0] = d
             break
-    print d, vertex, heap
     heapq.heapify(heap)
 
 if __name__ == '__main__':
