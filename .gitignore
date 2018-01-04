@@ -14,7 +14,11 @@
 .DS_Store*
 
 #ignore all
-/*
-!.gitignore
+/exam
+/handouts
+/homework
+/labs
+/quiz
+index.html
 
 
