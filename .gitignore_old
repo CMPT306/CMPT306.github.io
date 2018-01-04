@@ -1,0 +1,14 @@
+/local
+/.ipynb_checkpoints
+**/.ipynb_checkpoints
+**/solution
+**/present
+**/student
+**/local
+**/quiz
+**/tex
+**/latex
+
+#*.pyc
+~$*
+.DS_Store*
