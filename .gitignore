@@ -14,10 +14,10 @@
 .DS_Store*
 
 #ignore all
-#/exam
-#/handouts
-#/homework
-#/labs
+*/exam
+*/handouts
+*/homework
+*/labs
 */quiz
-/index.html
+*/index.html
 
