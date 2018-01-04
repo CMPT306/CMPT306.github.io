@@ -12,3 +12,8 @@
 #*.pyc
 ~$*
 .DS_Store*
+
+#ignore all
+*
+
+
