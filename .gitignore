@@ -14,6 +14,6 @@
 .DS_Store*
 
 #ignore all
-*
+.
 
 
