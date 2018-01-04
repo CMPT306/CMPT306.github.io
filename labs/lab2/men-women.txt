@@ -1,9 +1,0 @@
-Men:
-Bob: Lea, Ann, Sue
-Jim: Lea, Sue, Ann
-Tom: Sue, Lea, Ann
-
-Women:
-Ann: Jim, Tom, Bob
-Lea: Tom, Bob, Jim
-Sue: Jim, Tom, Bob
