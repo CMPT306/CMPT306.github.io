@@ -1,4 +1,39 @@
-*
-*/
-/*
-!.gitignore
+# exam, lab, hw
+/exam/final 
+/exam/midterm
+/homework/hw[2-7]
+/labs/lab[3-9]
+#/labs/lab3a
+#/labs/lab3b
+/labs/lab1[0-3]
+
+# self define
+**/solution
+**/present
+**/student
+**/students
+**/local
+**/tex
+**/latex
+**/other
+**/others
+**/file
+**/files
+**/inclass_test
+
+# jupyter notebook, python
+**/.ipynb_checkpoints
+**/__pycache__
+__init__.py
+*.pyc
+
+# vscode
+**/.vscode
+
+# other
+*.test
+*.class
+
+# mac
+~$*
+.DS_Store*
